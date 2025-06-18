@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automação de MEDs para PIX</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Automação de MEDs para PIX</h1>
+
+        <div id="initial-info" style="display: block;">
+            <div id="med-form">
+                <label for="end-to-end">End-to-End:</label>
+                <input type="text" id="end-to-end" required>
+
+                <label for="details">Detalhes da Solicitação (Máximo 500 caracteres):</label>
+                <textarea id="details" rows="4" maxlength="500"></textarea>
+
+                <label for="devolution-type">Tipo de Devolução:</label>
+                <select id="devolution-type" required>
+                    <option value="solicitação">Solicitação de Devolução</option>
+                    <option value="devolução">Devolução de Devolução</option>
+                </select>
+
+                <label for="devolution-reason">Motivo da Devolução:</label>
+                <select id="devolution-reason" required>
+                    <option value="golpe">Golpe/Estelionato</option>
+                    <option value="nao-autorizada">Transação Não Autorizada</option>
+                    <option value="coerção">Transferência Mediante Coerção</option>
+                </select>
+
+                <button id="open-meds">Abrir Relato MED</button>
+            </div>
+        </div>
+
+        <div id="med-popup" class="popup" style="display: none;">
+            <div class="popup-content">
+                <span class="close" onclick="fecharPopup()">&times;</span>
+                <h2 id="popup-title">MEDs Abertas</h2>
+                <p id="popup-message"></p>
+                <ul id="popup-transactions"></ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
