@@ -2,7 +2,7 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f0f8ff; /* Azul claro de fundo */
+    background-image: linear-gradient(to right , #129AF8, #1BAEE6, #26C8D0)
 }
 
 .container {
@@ -10,7 +10,7 @@ body {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #e0ffff; /* Azul claro de fundo da caixa */
+   background-color: #2d85c4; 
     border-radius: 10px; /* Bordas arredondadas */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
